@@ -261,6 +261,40 @@
     })();
 </script>
 <!-- /GetButton.io widget -->
+
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<script type="module">
+	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+	createChat({
+	webhookUrl: 'https://4vjkrjqikorv6ho0ctp5aj1h.hooks.n8n.cloud/webhook/cdb5c076-d458-4b9d-8398-f43bd25059b1/chat',
+	webhookConfig: {
+		method: 'POST',
+		headers: {}
+	},
+	target: '#n8n-chat',
+	mode: 'window',
+	chatInputKey: 'chatInput',
+	chatSessionKey: 'sessionId',
+	metadata: {},
+	showWelcomeScreen: false,
+	defaultLanguage: 'en',
+	initialMessages: [
+		'Hi there! 👋',
+		'My name is Eduardo. How can I assist you today?'
+	],
+	i18n: {
+		en: {
+			title: 'Hi there! 👋',
+			subtitle: "Start a chat. We're here to help you 24/7.",
+			footer: '',
+			getStarted: 'New Conversation',
+			inputPlaceholder: 'Type your question..',
+		},
+	},
+});
+
+</script>
 </body>
 
 </html>
